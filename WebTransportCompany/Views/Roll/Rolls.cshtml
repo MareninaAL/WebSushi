@@ -1,0 +1,43 @@
+﻿
+@model  IEnumerable<WebTransportCompany.Models.BaseModel>
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    <div class="main">
+        <div class="content">
+            <div class="content_resize">
+                <div class="mainbar">
+                    <div class="article">
+
+                        <div class="clr"></div>
+                        <div class="center">
+                            <p>Напитки</p>
+
+                            @{ var grid = new WebGrid(Model); }
+                            <div>
+                                @grid.GetHtml(columns: grid.Columns(
+                                             grid.Column("Id", "№"),
+                                             grid.Column("Name", "Название"),
+                                                grid.Column("Price", "Цена")
+), rowStyle: "row_table", tableStyle: "table-bordered")
+                            </div>
+                            <br>
+                            @{  if (User.Identity.IsAuthenticated)
+                                {
+                                    <input type="button" value="Добавить" onClick='location.href="AddRoll"'>
+                                }
+                            }
+                        </div>
+
+                        <div class="clr"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+

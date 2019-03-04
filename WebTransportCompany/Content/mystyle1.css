@@ -1,0 +1,208 @@
+﻿* {
+    color: black;
+}
+
+    *:focus {
+        outline: none;
+    }
+
+
+
+@font-face {
+    font-family: INVADER;
+    src: url(fonts/11812.ttf);
+}
+
+a:link, a:visited, a:hover, a:active, a:focus {
+    text-decoration: none;
+    color: #586272;
+    font-family: INVADER;
+}
+
+a:hover {
+    color: floralwhite;
+}
+
+input, textarea {
+    max-width: 100%
+}
+
+.row_table {
+    color: black;
+    margin-left: 15%; 
+}
+
+tbody {
+    color: black;
+}
+body {
+    background: url(..Content/images/fon.jpg);
+    color: floralwhite;
+}
+
+    body a {
+        background-color: #212020;
+        color: #586272;
+    }
+
+    body img {
+        margin-top: 2%;
+        width: 155px;
+        height: 110px;
+    }
+
+header, footer, #Menu_container, .state {
+    background-color: #302e2e;
+    float: left;
+    opacity: 0.6;
+}
+
+header {
+    width: 100%;
+    height: 200px;
+}
+
+
+header a {
+    background-color: #302e2e;
+    font-size: 330%;
+    float: left;
+    margin-top: 5%;
+    margin-left: 2%;
+}
+
+.order {
+    width: 18%;
+    float: left;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-top: 5%;
+    font-size: 50%;
+    border: 1px solid black;
+}
+.ref_header {
+    width: 45%;
+}
+
+
+.order img {
+    width: 18%;
+    height: 25%;
+}
+
+ header img {
+    width: 18%;
+    height: 30%;
+}
+
+.login {
+    width: 15%;
+    float: left;
+    font-size: 50%;
+    margin-top: 3%;
+}
+
+#result input, label, submit, DropDownList {
+    width: 30%;
+    margin-left: 20%;
+    text-align: center;
+    margin-top: 2%;
+}
+
+#btn_order input {
+    width: 20%;
+    height: 15%;
+}
+#result hr, h4 {
+    margin-left: 10%;
+}
+
+
+#Menu_container {
+    margin-top: 5%;
+    width: 20%;
+    height: 310px;
+    float: left;
+    margin-left: 1%;
+}
+
+
+    #Menu_container p {
+        background-color: #1c1b1b;
+        padding-top: 4%;
+        text-align: center;
+        color: #586272;
+        font-family: INVADER;
+    }
+
+    #Menu_container div {
+        width: 60%;
+        height: 8%;
+        text-align: center;
+        padding-top: 0%;
+        margin-top: 8%;
+        margin-left: 20%;
+        background-color: #1c1b1b;
+        border-radius: 5px;
+        border: 0.5px solid black;
+    }
+
+.drink_list, .rolls_list, .salads_list, .sushi_list, .sets_list {
+    text-align: center;
+    margin-top: 0%;
+    margin-right: 0%;
+    height: 310px;
+    width: 75%;
+    float: right;
+    line-height: 150%;
+}
+
+    .rolls_list div, .drink_list div, .salads_list div, .sushi_list div, .sets_list div {
+        margin-left: 1%;
+        margin-top: 5%;
+        float: left;
+        width: 17%;
+        height: 190px;
+        color: floralwhite;
+        background-color: #353333;
+        opacity: 0.5%;
+    }
+
+.article {
+    margin-left: 15%;
+}
+
+
+.content {
+    margin-left: 5%;
+    width: 70%;
+    margin-top: 2%;
+    padding: 1%;
+    color: #586272;
+}
+
+footer {
+    margin-top: 2%;
+    height: 110px;
+    width: 100%;
+    text-align: center;
+    color: floralwhite;
+}
+
+    footer img {
+        width: 6%;
+        height: 70%;
+        margin-top: -1%;
+    }
+
+    footer a {
+        background-color: #302e2e;
+    }
+
+    footer div {
+        margin-left: 11%;
+        background-color: #302e2e;
+        float: left;
+    }
+
+

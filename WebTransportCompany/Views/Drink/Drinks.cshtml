@@ -1,0 +1,80 @@
+﻿
+@model  IEnumerable<WebTransportCompany.Models.BaseModel>
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <script src="~/Scripts/search.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="content">
+            <div class="content_resize">
+                <div class="mainbar">
+                    <div class="article">
+
+                        <div class="clr"></div>
+                        <div class="center">
+                            <input class=form-control id=search onkeyup=mySearch() placeholder="Поиск" type=text>
+                            <p>Напитки</p>
+
+                            @{ var grid = new WebGrid(Model); }
+                            <div class="grid">
+
+                                @grid.GetHtml(columns: grid.Columns(
+                                             grid.Column("Id", "№"),
+                                             grid.Column("Name", "Название"),
+                                             grid.Column("Price", "Цена")
+                                        ),
+                                         rowStyle: "row_table",
+                                tableStyle: "table-bordered")
+                                <!--   <div class="btn_order"><input type="button" value="Добавить в заказ" onClick='location.href="Add_in_Order"'> </div>  -->
+                            </div>
+                            <br>
+                            @{  if (User.Identity.IsAuthenticated)
+                                {
+                                    <input type="button" value="Добавить" onClick='location.href="AddDrink"'>
+                                }
+                            }
+
+                           
+                            <div class="table-responsive">
+                                <table class="table-bordered" id="mytable">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Id</th>
+                                            <th scope="col">Название</th>
+                                            <th scope="col">Цена</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (WebTransportCompany.Models.Drink m in Model)
+                                        {
+                                            <tr>
+                                                <th scope="row">@m.Id</th>
+                                                <td>@m.Name</td>
+                                                <td>@m.Price</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                        </div>
+
+                        <div class="clr"></div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+
+

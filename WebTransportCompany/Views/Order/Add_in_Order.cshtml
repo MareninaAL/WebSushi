@@ -1,0 +1,64 @@
+﻿@using WebTransportCompany.Models
+
+@model WebTransportCompany.Models.Order
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+
+<body>
+    <div class="main">
+
+        <div class="content">
+            <div class="content_resize">
+                <div class="mainbar">
+                    <div class="article">
+
+                        <div class="clr"></div>
+                      <!--  <input type="hidden" name="OrderId" value=""> -->
+                        @using (Html.BeginForm())
+                        {
+                          
+                            @Html.LabelFor(model => model.Name, "Название")
+                            <br />
+                                @Html.EditorFor(model => model.Name)
+                                <br /><br />
+                                @Html.LabelFor(model => model.Name, "Роллы")
+                                <br />
+                            /*    @using (Html.BeginForm("AddRoll", "Roll",
+FormMethod.Post, new { enctype = "multipart/form-data" }))
+                                {*/
+                                    @Html.DropDownListFor(model => model.Rolls, ViewBag.Orders as SelectList)
+                                <br /><br />
+                                
+                                @Html.LabelFor(model => model.order_salad, "Салаты")
+                                <br />
+                                @Html.EditorFor(model => model.order_salad)
+                                <br /><br />
+                                @Html.LabelFor(model => model.order_drink, "Напитки")
+                                <br /> 
+                                @Html.EditorFor(model => model.order_drink)
+                                <br /><br />
+                                @Html.LabelFor(model => model.Summa, "Cумма")
+                                <br />
+                                @Html.EditorFor(model => model.Summa)
+                                <br /><br />
+
+
+                                <input type="submit" value="Добавить" />
+                        }
+                        <div class="clr"></div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+
+
+

@@ -1,0 +1,46 @@
+﻿
+@model WebTransportCompany.Models.Roll
+    @{
+        Layout = "/Views/Shared/_Layout.cshtml";
+    }
+
+    <body>
+        <div class="main">
+            
+            <div class="content">
+                <div class="content_resize">
+                    <div class="mainbar">
+                        <div class="article">
+
+                            <div class="clr"></div>
+
+                            @using (Html.BeginForm())
+                            {
+
+                                @Html.LabelFor(model => model.Name, "Название")
+                                <br />
+                                @Html.EditorFor(model => model.Name)
+                                <br /><br />
+                                @Html.LabelFor(model => model.Price, "Цена")
+                                <br />
+                                @Html.EditorFor(model => model.Price)
+                                <br /><br />
+                                
+
+                                <input type="submit"  value="Добавить" />
+                            }
+                            <div class="clr"></div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </body>
+    
+
+
+

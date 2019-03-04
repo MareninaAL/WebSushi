@@ -1,0 +1,44 @@
+﻿@model  IEnumerable<WebTransportCompany.Models.BaseModel>
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    <div class="main">
+        <div class="content">
+            <div class="content_resize">
+                <div class="mainbar">
+                    <div class="article">
+
+                        <div class="clr"></div>
+                     
+                        <div class="center">
+                            <p>Заказ:</p>
+
+                            @{ var grid = new WebGrid(Model); }
+                            <div>
+                                @grid.GetHtml(columns: grid.Columns(
+                                                                        grid.Column("Id", "№"),
+                                                                        grid.Column("CreateDate", "ДатаЗаказа"),
+                                                                        grid.Column("Client", "Клиент"),
+                                                                          grid.Column("Roll", "Роллы"),
+                                                                          grid.Column("Salad", "Салаты"),
+                                                                          grid.Column("Drink", "Напитки"),
+                                                                           grid.Column("Summa", "Сумма")
+
+
+                    ), rowStyle: "row_table",
+                    tableStyle: "table-bordered")
+                            </div>
+                            <input type="button" value="Добавить" onClick='location.href="Add_in_Order"'>
+                        </div>
+                        <div class="clr"></div>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </div>
+</body>
+
+
